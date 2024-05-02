@@ -1,0 +1,33 @@
+	#Binary
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+#BIRNARY ACTIVATION FUNCTION 
+x = np.arange(-10,10)
+y = []
+for i in range(x.shape[0]):
+    if(x[i]>0):
+        y.append(1)
+    else:
+        y.append(0)
+plt.plot(x,y,c="red")
+plt.title("Binary_ActivationFunction")
+
+
+
+	#Sigmoid
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+#SIGMOID ACTIVATION FUNCTION 
+x = np.arange(-10,10)
+y = []
+for i in range(x.shape[0]):
+    #Sigmoid Activation formula : 1/(1+e^-x)
+    y.append((1/(1+np.exp(-x[i]))))
+plt.plot(x,y,c="red")
+plt.title("SigmoidActivationFunction")
+plt.show()

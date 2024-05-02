@@ -1,0 +1,26 @@
+import pandas as pd 
+
+df = pd.read_csv('titanic.csv')
+df.head()
+
+
+df.drop(['Name','Embarked'],axis='columns',inplace = True)
+df.head()
+
+df.drop(['SibSp','Parch','Ticket','Fare','Cabin'],axis = "columns",inplace = True)
+df.head()
+
+df.drop(['PassengerId'],axis = "columns",inplace = True)
+df.head()
+
+
+
+
+
+
+
+
+from sklearn.naive_bayes import BernoulliNB
+model = BernoulliNB()
+model.fit(X_train,y_train)
+model.score(X_test,y_test)
